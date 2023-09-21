@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap">
+
+<head>
+          <link rel="stylesheet" href="styles.css">
+              
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.28/dist/sweetalert2.min.css">
+          
+      <link rel="stylesheet" type="text/css" href="Load-9">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- ajuste de tela para mobile -->
+    
+    
+
+
+   
+  
+
+    
+
+    
+    
+    
+    <title>Ritual de Pagamento</title>
+
+   
+    
+    
+</head>
+<body>
+  
+ 
+  
+           <header>
+          
+          <h1 class="gradient-title">Ritual de Pagamento</h1>
+          
+          <p class="frase1">"Imagine conquistar o mundo e todas as suas ambições realizadas."
+          </p>
+          
+     </header> <!-- div para o título e frase-->
+           
+  <div class="container">
+    <main>
+    <form id="payment-form">
+        <h2>Identificação:</h2>
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="birthdate">Data de Nascimento:</label>
+        <input type="date" id="birthdate" name="birthdate">
+
+
+
+        <h2>Endereço:</h2>
+        <label for="street">Rua:</label>
+        <input type="text" id="street" name="street">
+
+        <label for="number">Número:</label>
+        <input type="number" id="number" name="number">
+
+        <label for="complement">Complemento:</label>
+        <input type="text" id="complement" name="complement">
+
+  <label for="zipCode">CEP:</label>
+<input type="text" id="zipCode" name="zipCode" maxlength="8" pattern="\d{8}" title="Digite um CEP válido com 8 dígitos (somente números)">
+
+
+        <label for="city">Cidade:</label>
+        <input type="text" id="city" name="city">
+
+       <label for="state">Estado:</label>
+<select id="state" name="state">
+    <option value="AC">SP</option>
+    <option value="AL">AL</option>
+    <option value="AP">AP</option>
+    <option value="AM">AM</option>
+    <option value="BA">BA</option>
+    <option value="CE">CE</option>
+    <option value="DF">DF</option>
+    <option value="ES">ES</option>
+    <option value="GO">GO</option>
+    <option value="MA">MA</option>
+    <option value="MT">MT</option>
+    <option value="MS">MS</option>
+    <option value="MG">MG</option>
+    <option value="PA">PA</option>
+    <option value="PB">PB</option>
+    <option value="PR">PR</option>
+    <option value="PE">PE</option>
+    <option value="PI">PI</option>
+    <option value="RJ">RJ</option>
+    <option value="RN">RN</option>
+    <option value="RS">RS</option>
+    <option value="RO">RO</option>
+    <option value="RR">RR</option>
+    <option value="SC">SC</option>
+    <option value="SP">AC</option>
+    <option value="SE">SE</option>
+    <option value="TO">TO</option>
+</select>
+
+        <label for="country">País:</label>
+        <select id="country" name="country" required>
+            <option value="BRA">Brasil</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Estados Unidos">Estados Unidos</option>
+            <!-- Adicione outros países aqui -->
+        </select>
+              <h2>Dados do Cartão:</h2>
+
+        <label for="paymentType">Tipo de Pagamento:</label>
+        <select id="paymentType" name="paymentType" required>
+            <option value="CreditCard">Crédito da Alma</option>
+            <option value="DebitCard">Débito Diabólico</option>
+        </select>
+
+    <label for="cardBrand">Bandeira do Cartão:</label>
+<select id="cardBrand" name="cardBrand" required>
+    <option value="Master">Master - Profano</option>
+    <option value="Visa">Visa - Macabro</option>
+    <option value="Elo">Elo - Infernal</option>
+    <option value="Amex">Amex - Demoníaco</option>
+    <option value="Hipercar">Hipercard - Apocalíptico</option>
+    <option value="JCB">JCB - Maldito</option>
+    <option value="Diners">Diners - Obscuro</option>
+</select>
+
+
+
+       <label for="cardNumber">Número do Cartão:</label>
+<input type="tel" id="cardNumber" name="cardNumber" maxlength="16"
+required pattern="[0-9]{16}" placeholder="0000 0000 0000 0000" >
+
+<label for="securityCode">Código de Segurança:</label>
+<input type="number" id="securityCode" name="securityCode" min="1" max="999" maxlength="3" required>
+
+
+<label for="ExpirationDate">Data de Expiração:</label>
+<input type="tel" id="ExpirationDate"
+maxlength="7" placeholder="MM/AAAA"
+ name="ExpirationDate" pattern="^(0[1-9]|1[0-2])\/\d{4}$" required>
+
+
+        <label for="installments">Selecione o número de parcelas:</label>
+<select id="installments" name="installments" required>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+</select>
+
+
+<label for="amount">Valor:</label>
+<input type="text" id="amount" name="amount" required value="0,00">
+
+
+
+        <!-- Outras informações de pagamento aqui -->
+
+        <button type="submit">Finalizar</button>
+        
+        
+    </form>
+    
+    
+    <script src="preloader.js"></script>
+    <script src="validation.js"></script>
+    <script src="jsonconverter.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.28/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7">           </script>
+
+
+      
+      
+       
+  </main>
+  
+  
+
+  
+</div>
+  
+ </div><!-- fim do responsivo-->
+
+  
+  
+  
+  
+</body>
+</html>
+
